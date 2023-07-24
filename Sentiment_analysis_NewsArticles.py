@@ -5,9 +5,9 @@ import numpy as np
 import nltk
 
 '''CARGARMOS LOS 3 CSV DE DATOS PROVENIENTE DE KAGGLE Y LOS UNIFICAMOS EN UN ÚNICO DATAFRAME PARA PODER TRABAJAR CON ELLOS'''
-datos1 = pd.read_csv(r"C:\Users\sarer\Desktop\Bootcamp\00_mis ejercicios\Entegables\EDA\Dataset_noticias\UNIFICADOS DE DISTINTOS MEDIOS\articles1.csv")
-datos2 = pd.read_csv(r"C:\Users\sarer\Desktop\Bootcamp\00_mis ejercicios\Entegables\EDA\Dataset_noticias\UNIFICADOS DE DISTINTOS MEDIOS\articles2.csv")
-datos3 = pd.read_csv(r"C:\Users\sarer\Desktop\Bootcamp\00_mis ejercicios\Entegables\EDA\Dataset_noticias\UNIFICADOS DE DISTINTOS MEDIOS\articles3.csv")
+datos1 = pd.read_csv("XXX\articles1.csv")
+datos2 = pd.read_csv("XXX\articles2.csv")
+datos3 = pd.read_csv("XXX\articles3.csv")
 
 '''CREO UN DATAFRAME CON LOS DATOS DE LOS 3 CSV UNIFICADOS. LO GUARDO PARA TENER DIFERENTES VERSIONES E IR MODIFICANDO DATOS'''
 df_allnews = pd.concat([datos1,datos2,datos3], ignore_index=True)
@@ -114,7 +114,7 @@ df_allnews_cleaned_7.drop("Afinn_titulares",axis=1, inplace=True)
 df_allnews_cleaned_7.drop("Pipeline_titulares",axis=1, inplace=True)
 
 df_allnews_cleaned_8 = df_allnews_cleaned_7
-df_allnews_cleaned_7.to_csv(r"C:\Users\sarer\Desktop\Bootcamp\00_mis ejercicios\Entegables\EDA\Dataset_noticias\0_csv_procesados\nlp_scores_7")
+df_allnews_cleaned_7.to_csv("XXX\nlp_scores_7")
 
 '''DATA VISUALIZATION'''
 
@@ -124,7 +124,7 @@ import nltk
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-datos = pd.read_csv((r"C:\Users\sarer\Desktop\Bootcamp\00_mis ejercicios\Entegables\EDA\Dataset_noticias\0_csv_procesados\nlp_scores_7"))
+datos = pd.read_csv(("XXX\nlp_scores_7"))
 
 '''KDE SUPERPUESTOS'''
 Analisis_labels = ["Vader", "TextBlob","Afinn"]
